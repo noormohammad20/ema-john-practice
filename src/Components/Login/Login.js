@@ -17,9 +17,13 @@ const Login = () => {
                     </div>
                     <input className='form-submit' type="submit" value="Login" />
                 </form>
-                <p>
+                <p className='new-to-ema'>
                     New to ema-john? <Link className='form-link' to='signup'>Create an account</Link>
                 </p>
+                <div className='or'>
+                    or
+                </div>
+                <input className='form-submit-google' type="button" value="Continue With Google" />
             </div>
         </div>
     )

@@ -7,17 +7,19 @@
     border-radius: 8px;
     display: flex;
     justify-content: center;
+    box-shadow: -12px 12px rgba(255, 224, 179, 7);
+    ;
 }
 
 .form-title {
     color: rgba(42, 65, 79, 1);
-    width: 83px;
     height: 42px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
     line-height: 42px;
+    text-align: center;
 }
 
 .input-group {
@@ -43,14 +45,34 @@
     background: rgba(255, 153, 0, 0.3);
     width: 415px;
     height: 55px;
-    font-size: 22px;
+    font-size: 18px;
     border-radius: 8px;
     border: none;
-    margin-top: 44px;
+    margin-top: 30px;
+}
+
+.new-to-ema {
+    text-align: center;
 }
 
 .form-link {
     color: rgba(255, 153, 0, 1);
     text-decoration: none;
 
+}
+
+.or {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.form-submit-google {
+    background: white;
+    width: 415px;
+    height: 55px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 30px;
+    border: 1px solid rgba(149, 160, 167, 1)
 }
