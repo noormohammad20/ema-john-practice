@@ -9,16 +9,16 @@ const Login = () => {
                 <form>
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
-                        <input type="email" name="Email" id="email" />
+                        <input type="email" name="Email" id="email" required />
                     </div>
                     <div className="input-group">
                         <label htmlFor="password">Password</label>
-                        <input type="password" name="Password" id="password" />
+                        <input type="password" name="Password" id="password" required />
                     </div>
                     <input className='form-submit' type="submit" value="Login" />
                 </form>
                 <p className='new-to-ema'>
-                    New to ema-john? <Link className='form-link' to='signup'>Create an account</Link>
+                    New to ema-john? <Link className='form-link' to='/signup'>Create an account</Link>
                 </p>
                 <div className='or'>
                     or

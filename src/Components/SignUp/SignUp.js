@@ -1,9 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './SignUp.css'
+
 const SignUp = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [error, setError] = useState('')
+
+    const handleEmailBlur = e => {
+        setEmail(e.target.value)
+    }
+    const handlePasswordBlur = e => {
+        setPassword(e.target.value)
+    }
+    const handleConfirmPasswordBlur = e => {
+        setConfirmPassword(e.target.value)
+    }
+    const handleCreateUser = e => {
+        e.preventDefault()
+
+        if (password !== confirmPassword) {
+            setError("Your Two Password Didn't Matched")
+            return
+        }
+
+        if (password.length < 6) {
+            setError("Your Password Must Bee More Then Six Character")
+            return
+
+        }
+    }
     return (
-        <div>
-            <h2>This Is Sign up</h2>
+        <div className='form-container'>
+            <div>
+                <h2 className='form-title'>SignUp</h2>
+                <form onSubmit={handleCreateUser}>
+                    <div className="input-group">
+                        <label htmlFor="email">Email</label>
+                        <input onBlur={handleEmailBlur} type="email" name="Email" id="email" required />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="password">Password</label>
+                        <input onBlur={handlePasswordBlur} type="password" name="Password" id="password" required />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="confirmPassword">ConfirmPassword</label>
+                        <input onBlur={handleConfirmPasswordBlur} type="password" name="confirmPassword" id="confirm-password" required />
+                    </div>
+                    <p style={{ color: 'red' }}>{error}</p>
+                    <input className='form-submit' type="submit" value="Signup" />
+                </form>
+                <p className='new-to-ema'>
+                    Already have an account? <Link className='form-link' to='/login'>Login</Link>
+                </p>
+
+            </div>
         </div>
     )
 }
