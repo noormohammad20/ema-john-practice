@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './Product.css'
 const Product = ({ product, handleAddToCart }) => {
-    const { img, name, seller, price, ratings } = product
+    const { _id, img, name, seller, price, ratings } = product
 
     return (
-        <div className='product'>
+        <div key={_id} className='product'>
+
             <img src={img} alt="" />
             <div className="product-info">
                 <h6 className='product-name'>{name}</h6>
