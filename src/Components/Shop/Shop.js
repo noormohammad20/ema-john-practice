@@ -10,6 +10,7 @@ const Shop = () => {
     const [products] = useProducts([])
     const [cart, setCart] = useCart(products)
     const [pageCount, setPageCount] = useState(0)
+    const [page, setPage] = useState(0)
 
     useEffect(() => {
         fetch('http://localhost:5000/productCount')
@@ -50,7 +51,10 @@ const Shop = () => {
                 <div className='pagination'>
                     {
                         [...Array(pageCount).keys()]
-                            .map(number => <button>{number + 1}</button>)
+                            .map(number => <button
+                                className={page === number ? 'selected' : ''}
+                                onClick={() => setPage(number)}
+                            >{number + 1}</button>)
                     }
                 </div>
             </div>
