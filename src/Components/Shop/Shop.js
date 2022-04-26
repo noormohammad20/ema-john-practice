@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useCart from '../../hooks/useCart'
-import useProducts from '../../hooks/useProducts'
 import { addToDb } from '../../utilities/fakedb'
 import Cart from '../Cart/Cart'
 import Product from '../Product/Product'
 import './Shop.css'
 const Shop = () => {
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useCart()
     const [pageCount, setPageCount] = useState(0)
     const [page, setPage] = useState(0)
     const [size, setSize] = useState(10)
