@@ -1,18 +1,30 @@
-.header{
+.header {
     height: 80px;
-    background-color:  rgba(28, 43, 53, 1);
+    background-color: rgba(28, 43, 53, 1);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 140px;
 
 }
-.header a{
-   color: white;
+
+.header a {
+    color: white;
     text-decoration: none;
     margin-left: 35px;
     font-size: 17px;
 }
-.header a:hover{
+
+.header a:hover {
     color: orange;
-    }
+}
+
+.signOut-btn {
+    background: none;
+    color: white;
+    border: none;
+    margin-left: 30px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}

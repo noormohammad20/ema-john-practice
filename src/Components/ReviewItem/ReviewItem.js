@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './ReviewItem.css'
 const ReviewItem = ({ product, handleRemoveProduct }) => {
-    console.log(product)
+
     const { name, price, img, shipping, quantity } = product
     return (
         <div className='review-item'>
